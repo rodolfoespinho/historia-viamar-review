@@ -459,12 +459,11 @@
   }
   .closing-q {
     font-family: 'Playfair Display', serif;
-    font-size: clamp(24px, 3.8vw, 44px);
+    font-size: clamp(26px, 3.8vw, 48px);
     font-style: italic; font-weight: 700;
-    color: rgba(255,255,255,0.48);
-    line-height: 1.42; letter-spacing: -0.5px; margin-bottom: 28px;
+    color: rgba(255,255,255,0.62);
+    line-height: 1.38; letter-spacing: -0.5px; margin-bottom: 28px;
   }
-  .closing-q strong { color: var(--white); font-style: normal; }
   .closing-attr {
     font-size: 9.5px; letter-spacing: 5px; text-transform: uppercase;
     color: rgba(255,255,255,0.18); margin-bottom: 52px;
@@ -558,9 +557,21 @@
     .ch-text { padding: 36px 24px 52px; font-size: 18px; }
 
     /* Hero text */
-    .hero-eyebrow { margin-bottom: 20px; }
+    .hero-eyebrow {
+      margin-bottom: 20px;
+      font-size: 8px; letter-spacing: 3.5px;
+      flex-wrap: nowrap; white-space: nowrap;
+    }
+    .hero-eyebrow::before, .hero-eyebrow::after { width: 24px; }
     .hero-h1 { letter-spacing: -1.5px; }
-    .hero-sub { margin-top: 16px; }
+    .hero-sub { margin-top: 16px; font-size: 17px; }
+
+    /* Ch label mobile — prevent floating line */
+    .ch-label { flex-wrap: wrap; gap: 8px; }
+    .ch-label::after { display: none; }
+
+    /* CTA button — constrain width */
+    .cta { font-size: 14px; padding: 15px 32px; }
 
     /* Full bleed */
     .fb-text { padding: 0 24px; }
@@ -669,14 +680,14 @@
 <div class="ch-text rv">
   <span class="year-mark">— 1958 —</span>
   <p>
-    A Viamar foi fundada em Peniche no ano de 1958, com uma decisão simples:
-    levar pessoas à Berlenga. A ilha estava ali — visível em dias claros do porto —
-    mas inacessível para quem não tinha barca própria.
+    Em 1958, alguém em Peniche olhou para o horizonte e viu a Berlenga.
+    Não como obstáculo — como destino. Assim nasceu a Viamar: de uma decisão
+    simples, tomada à beira-mar, com a ilha à vista e o barco ao cais.
   </p>
   <p>
-    Era uma empresa de família. O porto como escritório, o mar como estrada,
-    a Berlenga como destino. As reservas faziam-se de viva voz, olho no olho.
-    A confiança era a moeda corrente.
+    Foi sempre uma empresa de família. O porto como escritório, o mar como estrada.
+    As reservas faziam-se de viva voz, a confiança não precisava de contrato.
+    Havia uma ilha para alcançar — e havia quem a soubesse alcançar.
   </p>
 </div>
 
@@ -715,14 +726,15 @@
 </section>
 <div class="ch-text rv">
   <p>
-    A entrada em serviço do <em style="color:rgba(255,255,255,0.68)">Cabo Avelar Pessoa</em>
-    marcou uma nova era nesta rota — o maior barco da travessia, com capacidade para 190 passageiros,
-    inspecionado anualmente pela Autoridade Marítima Nacional.
+    Há embarcações que se tornam parte da paisagem de um lugar.
+    O <em style="color:rgba(255,255,255,0.72)">Cabo Avelar Pessoa</em> é uma delas —
+    reconhecida ao amanhecer por gerações de Penicheiros que sabem que o verão
+    começa ali, na fila do cais, com a proa apontada à Berlenga.
   </p>
   <p>
-    Gerações cresceram a reconhecer a sua silhueta no porto ao amanhecer,
-    a saber que o verão começava ali, na fila do cais.
-    A embarcação tornou-se um símbolo que perdura.
+    Com capacidade para 190 passageiros, inspecionado anualmente pela Autoridade
+    Marítima Nacional. Mas o que os números não dizem é o que a silhueta representa:
+    a promessa de uma travessia que vai acontecer, como tem acontecido há décadas.
   </p>
 </div>
 
@@ -760,10 +772,15 @@
     </h2>
     <div class="s-body rv d2">
       <p>
-        Reserva Natural protegida. Património único.
-        Quem a visita uma vez, quer voltar sempre.
-        E é esse regresso que nos define — a certeza de que seremos nós
-        a fazer a travessia, como temos feito há mais de sessenta anos.
+        A Berlenga não se descreve facilmente. Pedras antigas, água de azul
+        impossível, silêncio partido pelo vento do largo. Reserva Natural
+        protegida, Reserva da Biosfera da UNESCO — mas sobretudo um lugar
+        que fica na memória de quem a visita.
+      </p>
+      <p>
+        Quem vai uma vez, quer voltar. É esse regresso que define
+        a Viamar: a certeza de que estaremos aqui, prontos para fazer
+        a travessia, como temos feito há mais de seis décadas.
       </p>
     </div>
   </div>
@@ -848,9 +865,8 @@
 <div class="closing">
   <div class="closing-orn rv" aria-hidden="true">⸻ ⚓ ⸻</div>
   <blockquote class="closing-q rv">
-    "Há coisas que o mar guarda.<br>
-    A Viamar guarda as pessoas<br>
-    <strong>enquanto atravessam.</strong>"
+    "O mar não tem memória.<br>
+    Nós guardamos a nossa."
   </blockquote>
   <div class="closing-attr rv">Viamar · Peniche · Desde 1958</div>
   <a
@@ -865,7 +881,7 @@
   <a href="../viamar-concept/index.html" class="f-logo">
     <img src="img/logo-viamar.png" alt="Viamar">
   </a>
-  <span class="f-copy">© 2025 Viamar — Travessias à Ilha da Berlenga · Peniche</span>
+  <span class="f-copy">© 2026 Viamar — Travessias à Ilha da Berlenga · Peniche</span>
   <a href="../viamar-concept/index.html" class="f-back">← Voltar ao início</a>
 </footer>
 
